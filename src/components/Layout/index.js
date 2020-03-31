@@ -21,6 +21,7 @@ const Main = styled.div`
   display: grid;
   grid-template-columns: auto repeat(12, minmax(auto, 5.41rem)) auto;
   column-gap: 1.875rem;
+  padding: 2rem 0;
 `;
 
 export const Content = styled.div`

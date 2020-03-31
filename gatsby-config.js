@@ -31,6 +31,14 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `resources`,
+        path: `${__dirname}/src/resources`,
+      },
+    },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
