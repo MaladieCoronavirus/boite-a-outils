@@ -6,7 +6,7 @@ export const globalStyles = css`
   html {
     box-sizing: border-box;
     -webkit-text-size-adjust: none;
-    font-family: sans-serif;
+    font-family: Inter, Arial, sans-serif;
     background-color: ${colors.bg};
     color: ${colors.text};
   }
