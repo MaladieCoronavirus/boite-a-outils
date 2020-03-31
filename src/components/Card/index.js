@@ -90,7 +90,6 @@ const CTA = styled.button`
   height: 2.375rem;
   line-height: 1.125rem;
   color: #FFFFFF;
-  font-family: Roboto;
   font-size: 0.875rem;
   font-weight: 500;
 `;

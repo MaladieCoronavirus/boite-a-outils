@@ -22,7 +22,7 @@ module.exports = {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
         google: {
-          families: ['Inter: 400, 500, 700', 'Roboto: 500']
+          families: ['Inter: 400, 500, 700']
         }
       }
     },
