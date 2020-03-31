@@ -2,10 +2,12 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
+import { colors } from 'Style/colors';
+
 const FooterContainer = styled.footer`
   width: 100%;
   align-self: end;
-  background: #1F2F49;
+  background: ${colors.bgMuted};
   min-height: 6rem;
   padding: 1.45rem 1.0875rem;
 `;
@@ -18,11 +20,11 @@ const List = styled.ul`
 const ListItem = styled.li`
   a {
     text-decoration: none;
-    color: #EEF0F5;
+    color: ${colors.text};
     font-size: .9rem;
-    
+
     &:hover {
-      color: #D5D7DC;
+      color: ${colors.text};
     }
   }
 `;
@@ -40,4 +42,3 @@ const Footer = () => (
 );
 
 export default Footer;
-

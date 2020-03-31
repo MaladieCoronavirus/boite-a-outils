@@ -2,6 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 
+import { colors } from 'Style/colors';
+
 const HeaderContainer = styled.header`
   width: 100%;
   background: white;
@@ -15,10 +17,10 @@ const LogoContainer = styled.div`
     text-decoration: none;
     font-size: 1.7rem;
     font-weight: 600;
-    color: #1F2F49;
-    
+    color: ${colors.primary};
+
     &:hover {
-      color: #1B2A41;
+      color: ${colors.primary};
     }
   }
 `;
