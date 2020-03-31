@@ -19,6 +19,14 @@ module.exports = {
       }
     },
     {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Inter: 400, 500, 700', 'Roboto: 500']
+        }
+      }
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         defaultLayouts: { default: path.resolve('./src/components/Layout') },

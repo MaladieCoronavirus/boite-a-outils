@@ -2,70 +2,108 @@ import styled from '@emotion/styled';
 import React from 'react';
 
 const StyledCard = styled.li`
-  border: 1px solid;
+  position: relative;
+  border: 1px solid #F4F4F4;
   border-radius: 0.25rem;
-  cursor: pointer;
+  box-shadow: 1px 3px 9px 0 rgba(0, 0, 0, 0.07);
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 1.1875rem 1.125rem 1.875rem 2rem;
   :focus-within, :hover {
-    box-shadow: 0 0 0 0.25rem;
+    box-shadow: 0 0 0 0.1rem;
   }
   :focus-within a:focus {
     text-decoration: none;
   }
-  a {
-    text-decoration: none;
-    color: #000;
-  }
-  a:focus {
-    outline: none;
-    text-decoration: underline;
-  }
 `;
 
-const ImageContainer = styled.div`
-  height: 6.5rem;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 1rem));
+const SVG = styled.img`
+  width: 3.875rem;
+  height: auto;
 `;
 
-const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  filter: grayscale(100%);
-  object-fit: cover;
+const Heading = styled.span`
+  position: absolute;
+  right: 1.125rem;
+  text-transform: uppercase;
+  line-height: 0.9375rem;
+  color: #FF8000;
+  font-size: 0.75rem;
+  font-weight: bold;
 `;
+
 
 const TextContainer = styled.div`
   display: flex;
   flex: 1 0 auto;
   flex-direction: column;
-  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  text-align: center;
+  letter-spacing: 0;
   p {
     max-width: 60ch;
   }
   > * {
-    text-transform: capitalize;
-  }
-  > * + * {
-    margin-top: 0.75rem;
-  }
-  :last-child {
-    margin-top: auto;
-    padding-top: 0.75rem;
+    margin-bottom: 0.325rem;
+    width: 100%;
   }
 `;
 
-const Card = ({ data: { link, image, title, text, author }}) => 
+const Title = styled.h2`
+  margin-bottom: 0.6875rem;
+  line-height: 1.5625rem;
+  color: #0069CC;
+  font-size: 1.3125rem;
+  font-weight: bold;
+`;
+
+const SubTitle = styled.p`
+  margin-bottom: 1.4375rem;
+  line-height: 1.25rem;
+  color: #3B3B3B;
+  font-size: 1rem;
+`;
+
+const Link = styled.a`
+  margin-bottom: 1.5rem;
+  text-decoration: none;
+  line-height: 1rem;
+  letter-spacing: 0;
+  color: #FF8000;
+  font-size: 0.75rem;
+  font-weight: 500;
+  :focus {
+    outline: none;
+    text-decoration: underline;
+  }
+`;
+
+const CTA = styled.button`
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.125rem;
+  background-color: #0064D5;
+  cursor: pointer;
+  width: 8.25rem;
+  height: 2.375rem;
+  line-height: 1.125rem;
+  color: #FFFFFF;
+  font-family: Roboto;
+  font-size: 0.875rem;
+  font-weight: 500;
+`;
+
+const Card = ({ data: { link, image, heading, title, subtitle }}) =>
   <StyledCard>
-    <a href={link} title={title}>
-    <ImageContainer>
-      <Image src={image} alt={title} />
-    </ImageContainer>
+    <SVG src={image.danger} alt={title} />
+    <Heading>{heading}</Heading>
     <TextContainer>
-        <h2>{title}</h2>
-        <p>{text}</p>
-        <small>{author}</small>
+      <Title>{title}</Title>
+      <SubTitle>{subtitle}</SubTitle>
+      <Link href={link} title={title}>{link}</Link>
+      <CTA>En savoir plus</CTA>
     </TextContainer>
-    </a>
   </StyledCard>
-;
 
 export default Card;
