@@ -1,9 +1,10 @@
 import styled from '@emotion/styled';
 import React from 'react';
+import { colors } from 'Style/colors';
 
 const StyledCard = styled.li`
   position: relative;
-  border: 1px solid #F4F4F4;
+  border: 1px solid ${colors.bg};
   border-radius: 0.25rem;
   box-shadow: 1px 3px 9px 0 rgba(0, 0, 0, 0.07);
   background-color: rgba(255, 255, 255, 0.6);
@@ -26,7 +27,7 @@ const Heading = styled.span`
   right: 1.125rem;
   text-transform: uppercase;
   line-height: 0.9375rem;
-  color: #FF8000;
+  color: ${colors.accent};
   font-size: 0.75rem;
   font-weight: bold;
 `;
@@ -53,7 +54,7 @@ const TextContainer = styled.div`
 const Title = styled.h2`
   margin-bottom: 0.6875rem;
   line-height: 1.5625rem;
-  color: #0069CC;
+  color: ${colors.bgPrimary};
   font-size: 1.3125rem;
   font-weight: bold;
 `;
@@ -61,7 +62,7 @@ const Title = styled.h2`
 const SubTitle = styled.p`
   margin-bottom: 1.4375rem;
   line-height: 1.25rem;
-  color: #3B3B3B;
+  color: ${colors.text};
   font-size: 1rem;
 `;
 
@@ -70,7 +71,7 @@ const Link = styled.a`
   text-decoration: none;
   line-height: 1rem;
   letter-spacing: 0;
-  color: #FF8000;
+  color: ${colors.accent};
   font-size: 0.75rem;
   font-weight: 500;
   :focus {
@@ -83,7 +84,7 @@ const CTA = styled.button`
   align-items: center;
   justify-content: center;
   border-radius: 0.125rem;
-  background-color: #0064D5;
+  background-color: ${colors.primary};
   cursor: pointer;
   width: 8.25rem;
   height: 2.375rem;
