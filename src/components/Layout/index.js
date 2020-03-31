@@ -1,31 +1,14 @@
 import React from 'react';
-import { Global, css } from "@emotion/core";
+import { Global } from "@emotion/core";
 import styled from '@emotion/styled';
 import { MDXProvider } from '@mdx-js/react';
+
+import { globalStyles } from 'Style/global';
 
 import SEO from 'Components/SEO';
 import Header from 'Components/Header';
 import Footer from 'Components/Footer';
 import { H1, P } from 'Components/HTML';
-
-// insert here global styles, reset, etc.
-const globalStyles = css`
-  html {
-    box-sizing: border-box;
-    -webkit-text-size-adjust: none;
-    font-family: sans-serif;
-  }
-
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-
-  * {
-    margin: 0;
-  }
-`;
 
 // create components, here or somewhere else, with emotion styled
 const Container = styled.div`
