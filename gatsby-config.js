@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   siteMetadata: {
     siteUrl: `https://maladiecoronavirus.fr/`,
-    title: `Gatsby Covid-19`,
+    title: `OutilsCoronavirus.fr`,
     description: `This is the meta description for the site`,
   },
   plugins: [
@@ -13,7 +13,8 @@ module.exports = {
       options: {
         alias: {
           'Components': path.resolve(__dirname, 'src/components'),
-          'Style': path.resolve(__dirname, 'src/style')
+          'Style': path.resolve(__dirname, 'src/style'),
+          'Images': path.resolve(__dirname, 'src/images')
         },
       }
     },
