@@ -2,8 +2,8 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://maladiecoronavirus.fr/`,
-    title: `Gatsby Covid-19`,
+    siteUrl: `https://www.outilscoronavirus.fr/`,
+    title: `OutilsCoronavirus.fr`,
     description: `This is the meta description for the site`,
   },
   plugins: [
@@ -21,7 +21,7 @@ module.exports = {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: ['Inter:400,700']
+          families: ['Inter:500,700']
         }
       }
     },
