@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://maladiecoronavirus.fr/`,
+    siteUrl: `https://www.outilscoronavirus.fr/`,
     title: `OutilsCoronavirus.fr`,
     description: `This is the meta description for the site`,
   },
