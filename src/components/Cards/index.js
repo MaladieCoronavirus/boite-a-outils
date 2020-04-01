@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import Card from '../Card';
+import question from 'Images/question.svg';
 
 const Container = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(27.4375rem, 1fr));
   grid-row-gap: 1.5rem;
   grid-column-gap: 1.5rem;
   align-items: start;
@@ -14,16 +15,17 @@ const Container = styled.ul`
   list-style: none;
 `;
 
+
 const Cards = () => {
   const jsxCards = [];
 
   for (let indexCard = 1; indexCard <= 100; indexCard++) {
     const cardItem = {
-      image: "https://as2.ftcdn.net/jpg/00/84/76/33/500_F_84763354_l03Lg7bgSyWhFnP10oBhxN2wGW24n4hP.jpg",
-      title: "sample title " + indexCard,
-      text: "sample text " + indexCard,
-      link: "https://maladiecoronavirus.fr/",
-      author: "By Meetic"
+      image: {question},
+      heading: "Consultation",
+      title: "Regional Cuisine Down Home Southern Cooking",
+      subtitle: "Toffee sesame snaps cheesecake. Chocolate cake chocolte candy corona",
+      link: "https://www.maladiecoronavirus.fr/"
     };
 
     jsxCards.push(
