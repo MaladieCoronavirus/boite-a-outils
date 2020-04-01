@@ -23,7 +23,7 @@ const CategoryCards = ({resources}) => {
           title: resource.name,
           subtitle: resource.description,
           link: resource.link
-        }} />
+        }} key={resource.id} />
         ))}
     </StyledContainer>
   );

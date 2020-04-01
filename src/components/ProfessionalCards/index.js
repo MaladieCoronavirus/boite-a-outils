@@ -8,6 +8,7 @@ const ProfessionalCards = () => {
     query ProfessionalResources {
       allResourcesYaml(filter: {target: {eq: "professional"}}) {
         nodes {
+          id
           link
           description
           author

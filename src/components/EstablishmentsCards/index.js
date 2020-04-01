@@ -8,6 +8,7 @@ const EstablishmentsCards = () => {
     query EstablishmentsResources {
       allResourcesYaml(filter: {target: {eq: "establishment"}}) {
         nodes {
+          id
           link
           description
           author

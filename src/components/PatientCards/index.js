@@ -8,6 +8,7 @@ const PatientCards = () => {
     query PatientResources {
       allResourcesYaml(filter: {target: {eq: "patient"}}) {
         nodes {
+          id
           link
           description
           author
