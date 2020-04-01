@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { Link } from 'gatsby';
 
 import { colors } from 'Style/colors';
-import logo from 'Images/logo.png';
+import { Logo } from 'Components/Icons';
 
 const HeaderContainer = styled.header`
   display: grid;
@@ -18,30 +18,20 @@ const LogoContainer = styled.div`
   display: inline-block;
   margin-left: 4.75rem;
   height: 2.5rem;
+  
+  a {
+    text-decoration: none;
+  }
 `;
 
-const Header = () => {
-  const { site } = useStaticQuery(
-      graphql`
-        query {
-          site {
-            siteMetadata {
-              title
-            }
-          }
-        }
-      `
-  );
-
-  return (
-      <HeaderContainer>
-        <LogoContainer>
-          <Link to="/">
-            <img src={logo} alt={site.siteMetadata.title} />
-          </Link>
-        </LogoContainer>
-      </HeaderContainer>
-  );
-};
+const Header = () => (
+    <HeaderContainer>
+      <LogoContainer>
+        <Link to="/">
+          <Logo/>
+        </Link>
+      </LogoContainer>
+    </HeaderContainer>
+);
 
 export default Header;
