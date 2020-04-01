@@ -9,6 +9,6 @@ const H3 = styled.h3`
   font-weight: 500;
   color: ${colors.accent};
   text-align: center;
-`
+`;
 
 export default H3;
