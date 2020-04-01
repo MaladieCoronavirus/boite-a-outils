@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import Card from '../Card';
-import question from 'Images/drugs.svg';
+import question from 'Images/question.svg';
 
 const Container = styled.ul`
   display: grid;
