@@ -45,6 +45,14 @@ module.exports = {
         sitemapSize: 50000
       }
     },
-    `gatsby-plugin-emotion`
+    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-plugin-build-date`,
+      options: {
+        formatting: {
+          format: 'DD/MM/YYYY'
+        }
+      },
+    },
   ],
 }
