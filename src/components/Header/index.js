@@ -16,7 +16,7 @@ const HeaderContainer = styled.header`
 
 const LogoContainer = styled.div`
   display: inline-block;
-  margin-left: 4.75rem;
+  margin-left: 1rem;
   height: 2.5rem;
   
   a {
@@ -24,6 +24,10 @@ const LogoContainer = styled.div`
     align-items: center;
     text-decoration: none;
     color: ${colors.textHighlight};
+  }
+  
+  @media (min-width: 30rem) {
+    margin-left: 4.75rem;
   }
 `;
 
