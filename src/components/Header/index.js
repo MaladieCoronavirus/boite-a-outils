@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { useStaticQuery, graphql, Link } from 'gatsby';
+import { Link } from 'gatsby';
 
 import { colors } from 'Style/colors';
-import logo from 'Images/logo.png';
+import { Logo } from 'Components/Icons';
 
 const HeaderContainer = styled.header`
   display: grid;
@@ -18,30 +18,37 @@ const LogoContainer = styled.div`
   display: inline-block;
   margin-left: 4.75rem;
   height: 2.5rem;
+  
+  a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: ${colors.textHighlight};
+  }
 `;
 
-const Header = () => {
-  const { site } = useStaticQuery(
-      graphql`
-        query {
-          site {
-            siteMetadata {
-              title
-            }
-          }
-        }
-      `
-  );
+const LogoText = styled.span`
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+    
+    strong {
+      font-weight: 500;
+    }
+`;
 
-  return (
-      <HeaderContainer>
-        <LogoContainer>
-          <Link to="/">
-            <img src={logo} alt={site.siteMetadata.title} />
-          </Link>
-        </LogoContainer>
-      </HeaderContainer>
-  );
-};
+const Header = () => (
+    <HeaderContainer>
+      <LogoContainer>
+        <Link to="/">
+          <Logo/>
+          <LogoText>
+            OUTILS<strong>CORONAVIRUS</strong>.FR
+          </LogoText>
+        </Link>
+      </LogoContainer>
+    </HeaderContainer>
+);
 
 export default Header;
