@@ -10,6 +10,7 @@ export const globalStyles = css`
     font-weight: 500;
     background-color: ${colors.bg};
     color: ${colors.text};
+    scroll-behavior: smooth;
   }
 
   *,
