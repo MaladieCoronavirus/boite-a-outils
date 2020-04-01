@@ -31,12 +31,28 @@ module.exports = {
         path: `${__dirname}/src/pages`,
       },
     },
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `resources`,
+        path: `${__dirname}/src/resources`,
+      },
+    },
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
         sitemapSize: 50000
       }
     },
-    `gatsby-plugin-emotion`
+    `gatsby-plugin-emotion`,
+    {
+      resolve: `gatsby-plugin-build-date`,
+      options: {
+        formatting: {
+          format: 'DD/MM/YYYY'
+        }
+      },
+    },
   ],
 }
