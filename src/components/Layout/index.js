@@ -21,7 +21,6 @@ const Main = styled.div`
   display: grid;
   grid-template-columns: auto 1fr auto;
   column-gap: 0.5rem;
-  padding: 2rem 0;
 
   @media (min-width: 30rem) {
     grid-template-columns: auto repeat(12, minmax(auto, 5.41rem)) auto;
@@ -29,8 +28,9 @@ const Main = styled.div`
   }
 `;
 
-export const Content = styled.div`
+export const Content = styled.section`
   grid-column: 2 / -2;
+  padding: 2rem 0;
 `;
 
 // pageContext is injected by the mdx plugin
