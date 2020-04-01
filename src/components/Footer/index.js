@@ -125,9 +125,10 @@ const Footer = () => (
       </section>
       <NoticeContainer>
         <TextContainer>
-         Algorithme d'orientation mis à jour sur les recommandations en vigueur au 22/03/2020 à 16h15.
-          Ce site d’information n’est pas un dispositif médical, il ne délivre pas d’avis médical.
-          Projet solidaire d'urgence, financé par <LinkContainer secondary><Link to="/partenaires">l’Alliance Digitale contre le COVID-19 </Link> </LinkContainer>
+          Base d’information mise à jour le XX/XX/XX. Vous pouvez accéder et contribuer à cette base
+          d’information sur le projet Github <LinkContainer secondary>
+          <a href="https://github.com/MaladieCoronavirus/boite-a-outils" target="_blank" rel="noopener noreferrer">MaladieCoronavirus/boite-a-outils</a></LinkContainer>.
+          Site réalisé avec le concours de <LinkContainer secondary><Link to="/partenaires">l’Alliance Digitale contre le COVID-19 </Link> </LinkContainer>
            : <LinkContainer secondary><a href="https://twitter.com/maladiecovid19" target="_blank" rel="noopener noreferrer">@maladiecovid19</a></LinkContainer>
         </TextContainer>
       </NoticeContainer>
