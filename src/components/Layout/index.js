@@ -8,7 +8,7 @@ import { globalStyles } from 'Style/global';
 import SEO from 'Components/SEO';
 import Header from 'Components/Header';
 import Footer from 'Components/Footer';
-import { H1, H2, P } from 'Components/HTML';
+import { H1, H2, H3, P } from 'Components/HTML';
 
 // create components, here or somewhere else, with emotion styled
 const Container = styled.div`
@@ -41,6 +41,7 @@ const BaseLayout = ({children, pageContext}) => {
     <MDXProvider components={{
       h1: H1,
       h2: H2,
+      h3: H3,
       p: P
     }}>
       <Global styles={globalStyles} />
