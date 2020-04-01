@@ -61,7 +61,7 @@ const ArrowRightIcon = styled.img`
   margin-left: .5rem;
 `;
 
-const LINK_TEXT = 'En savoir plus';
+const LINK_TEXT = 'Se renseigner';
 
 const TargetCard = ({title, link}) => (
     <CardContainer>
