@@ -54,5 +54,16 @@ module.exports = {
         }
       },
     },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `OutilsCoronavirus.fr`,
+        short_name: `OutilsCoronavirus.fr`,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#0069CC`,
+        icon: `src/images/favicon.svg`,
+      },
+    },
   ],
 }
