@@ -20,8 +20,22 @@ const LogoContainer = styled.div`
   height: 2.5rem;
   
   a {
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    color: ${colors.textHighlight};
   }
+`;
+
+const LogoText = styled.span`
+    margin-left: 1rem;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.0625rem;
+    
+    strong {
+      font-weight: 500;
+    }
 `;
 
 const Header = () => (
@@ -29,6 +43,9 @@ const Header = () => (
       <LogoContainer>
         <Link to="/">
           <Logo/>
+          <LogoText>
+            OUTILS<strong>CORONAVIRUS</strong>.FR
+          </LogoText>
         </Link>
       </LogoContainer>
     </HeaderContainer>
