@@ -4,11 +4,11 @@ instances:
 
 logs:
   - type: file
-    path: /var/log/nginx/access.log
+    path: /app/logs/access.log.json
     service: nginx
     source: nginx
 
   - type: file
-    path: /var/log/nginx/error.log
+    path: /app/logs/error.log
     service: nginx
     source: nginx

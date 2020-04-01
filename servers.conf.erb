@@ -1,0 +1,79 @@
+log_format json_custom escape=json
+'{'
+  '"http.version":"$request",'
+  '"http.status_code":$status,'
+  '"http.method":"$request_method",'
+  '"http.referer":"$http_referer",'
+  '"http.useragent":"$http_user_agent",'
+  '"time_local":"$time_local",'
+  '"remote_addr":"$remote_addr",'
+  '"remote_user":"$remote_user",'
+  '"body_bytes_sent":"$body_bytes_sent",'
+  '"request_time":$request_time,'
+  '"response_content_type":"$sent_http_content_type",'
+  '"X-Forwarded-For":"$proxy_add_x_forwarded_for"'
+'}';
+
+server {
+  listen 81;
+  access_log off;
+  allow 127.0.0.1;
+  deny all;
+
+  location /nginx_status {
+    stub_status;
+  }
+}
+
+server {
+    listen <%= ENV['PORT'] %> reuseport;
+    server_name localhost;
+
+    charset utf-8;
+    port_in_redirect off;
+    root <%= ENV['HOME'] %>/public/;
+    access_log logs/access.log.json json_custom;
+    keepalive_timeout 5;
+
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self' https://cdn.simpleanalytics.io; frame-ancestors 'none'" always;
+    add_header X-XSS-Protection "1; mode=block" always;
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always
+    add_header X-Frame-Options "DENY" always;
+
+    error_page 405 @error405;
+    location @error405 {
+        add_header Allow "GET, HEAD" always;
+    }
+
+    if ( $request_method !~ ^(GET|HEAD)$ ) {
+        return 405;
+    }
+
+    if ($http_x_forwarded_proto != "https") {
+        return 301 https://$host$request_uri;
+    }
+
+    if ($host != <%= CANONICAL_HOST %>) {
+      return 301 $http_x_forwarded_proto://<%= CANONICAL_HOST %>$request_uri;
+    }
+
+    location ~* ^/sw.js$ {
+        add_header Cache-Control "public, max-age=0, must-revalidate";
+    }
+
+    location ~* \.(js|css)$ {
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    location ~* ^/static/.* {
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    location ~* ^/icons/.*$  {
+        add_header Cache-Control "public, max-age=31536000, immutable";
+    }
+
+    location ~* .* {
+        add_header Cache-Control "public, max-age=0, must-revalidate";
+    }
+}
