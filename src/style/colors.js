@@ -7,5 +7,5 @@ export const colors = {
   textHighlight: '#FFFFFF',
   bgHighlight: '#F9F9F9',
   bgPrimary: '#0069CC',
-  bgMuted: '#F0F0F0',
+  bgMuted: '#FFF',
 }

@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import { MDXProvider } from '@mdx-js/react';
 
 import { globalStyles } from 'Style/global';
+import { colors } from 'Style/colors';
 
 import SEO from 'Components/SEO';
 import Header from 'Components/Header';
@@ -17,7 +18,7 @@ const Container = styled.div`
   min-height: 100vh;
 `;
 
-const Main = styled.div`
+export const Main = styled.div`
   display: grid;
   grid-template-columns: auto 1fr auto;
   column-gap: 0.5rem;
@@ -31,6 +32,11 @@ const Main = styled.div`
 export const Content = styled.section`
   grid-column: 2 / -2;
   padding: 2rem 0;
+`;
+
+export const FullWidthContent = styled.section`
+  grid-column: 1 / -1;
+  background-color: ${colors.bg};
 `;
 
 // pageContext is injected by the mdx plugin
