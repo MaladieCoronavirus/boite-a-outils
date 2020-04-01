@@ -95,7 +95,7 @@ const CTA = styled.button`
 
 const Card = ({ data: { link, image, heading, title, subtitle }}) =>
   <StyledCard>
-    <SVG src={image.drugs} alt={title} />
+    <SVG src={image.question} alt={title} />
     <Heading>{heading}</Heading>
     <TextContainer>
       <Title>{title}</Title>

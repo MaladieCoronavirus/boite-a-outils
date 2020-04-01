@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import Card from '../Card';
-import drugs from 'Images/drugs.svg';
+import question from 'Images/drugs.svg';
 
 const Container = styled.ul`
   display: grid;
@@ -21,7 +21,7 @@ const Cards = () => {
 
   for (let indexCard = 1; indexCard <= 100; indexCard++) {
     const cardItem = {
-      image: {drugs},
+      image: {question},
       heading: "Consultation",
       title: "Regional Cuisine Down Home Southern Cooking",
       subtitle: "Toffee sesame snaps cheesecake. Chocolate cake chocolte candy corona",
