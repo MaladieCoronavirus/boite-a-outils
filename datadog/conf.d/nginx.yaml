@@ -1,0 +1,14 @@
+instances:
+  - nginx_status_url: http://localhost:81/nginx_status/
+  - persist_connections: true
+
+logs:
+  - type: file
+    path: /var/log/nginx/access.log
+    service: nginx
+    source: nginx
+
+  - type: file
+    path: /var/log/nginx/error.log
+    service: nginx
+    source: nginx
