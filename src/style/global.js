@@ -8,7 +8,7 @@ export const globalStyles = css`
     -webkit-text-size-adjust: none;
     font-family: Inter, Arial, sans-serif;
     font-weight: 500;
-    background-color: #FFF;
+    background-color: ${colors.bgMuted};
     color: ${colors.text};
     scroll-behavior: smooth;
   }
