@@ -2,15 +2,19 @@
 title: Accueil
 ---
 
-import { Content } from 'Components/Layout';
+import { Content, FullWidthContent, Main } from 'Components/Layout';
 import TargetCards from 'Components/TargetCards';
 import PatientCards from 'Components/PatientCards';
 import ProfessionalCards from 'Components/ProfessionalCards';
 import EstablishmentsCards from 'Components/EstablishmentsCards';
 
-<Content>
-  <TargetCards/>
-</Content>
+<FullWidthContent>
+  <Main>
+    <Content>
+      <TargetCards/>
+    </Content>
+  </Main>
+</FullWidthContent>
 
 <Content id="patient">
 
