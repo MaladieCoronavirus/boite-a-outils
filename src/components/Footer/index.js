@@ -111,23 +111,23 @@ const Footer = () => {
             </li>
             <li>
               <LinkContainer>
-                <Link to="/mentions-legales">
+                <a href="https://maladiecoronavirus.fr/mentions-legales" title="Mentions légales" target="_blank" rel="noopener noreferrer">
                   Mentions légales
-                </Link>
+                </a>
               </LinkContainer>
             </li>
             <li>
               <LinkContainer>
-                <Link to="/partenaires">
+                <a href="https://maladiecoronavirus.fr/partenaires" title="Partenaires" target="_blank" rel="noopener noreferrer">
                   Partenaires
-                </Link>
+                </a>
               </LinkContainer>
             </li>
             <li>
               <LinkContainer>
-                <Link to="/presse">
+                <a href="https://maladiecoronavirus.fr/presse" title="Presse" target="_blank" rel="noopener noreferrer">
                   Presse
-                </Link>
+                </a>
               </LinkContainer>
             </li>
           </List>
