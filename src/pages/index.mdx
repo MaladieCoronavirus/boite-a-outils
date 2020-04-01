@@ -3,38 +3,25 @@ title: Accueil
 ---
 
 import { Content } from 'Components/Layout';
-import { graphql } from "gatsby"
+import PatientCards from 'Components/PatientCards';
+import ProfessionalCards from 'Components/ProfessionalCards';
+import EstablishmentsCards from 'Components/EstablishmentsCards';
 
 <Content>
 
-# Retrouver les informations qui vous concernent
-## Pour tous les particuliers
+  # Retrouver les informations qui vous concernent
+  ## Pour tous les particuliers
 
-<div style={{display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(25rem, 1fr))', gap: '2rem'}}>
-  {props.data.allResourcesYaml.nodes.map(resource => (
-    <div style={{border: '1px solid black', padding: '2rem'}}>
-      <p>{resource.pathology}</p>
-      <p>{resource.name}</p>
-      <p>{resource.description}</p>
-      <p>{resource.link}</p>
-      <p>{resource.author}</p>
-    </div>
-    ))}
-</div>
+  <PatientCards />
+
+  # Découvrez tous les sites d’utilités essentielles
+  ## Pour tous les soignants, praticiens
+
+  <ProfessionalCards />
+
+  # Parcourez les outils et les ressources à disposition
+  ## Pour tous les établissements de santé
+
+  <EstablishmentsCards />
 
 </Content>
-
-
-export const pageQuery = graphql`
-  query PatientResources {
-    allResourcesYaml(filter: {target: {eq: "patient"}}) {
-      nodes {
-        link
-        description
-        author
-        name
-        pathology
-      }
-    }
-  }
-`

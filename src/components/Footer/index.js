@@ -6,13 +6,21 @@ import { colors } from 'Style/colors';
 
 const FooterContainer = styled.footer`
   display: grid;
-  grid-template-columns: auto auto auto;
   justify-content: space-between;
   align-self: end;
   background: ${colors.bgHighlight};
   min-height: 6rem;
   padding: 1.5rem 1.5rem;
   grid-column-gap: 4rem;
+  grid-row-gap: 2rem;
+
+  @media (min-width: 35rem) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 50rem) {
+    grid-template-columns: auto auto auto;
+  }
 `;
 
 const FooterHeadline = styled.h3`
@@ -28,7 +36,6 @@ const List = styled.ul`
 `;
 
 const TextContainer = styled.p`
-  margin-top: 2.3rem;
   font-size: 1rem;
   line-height: 1.5rem;
 `;
@@ -39,11 +46,22 @@ const LinkContainer = styled.span`
     text-decoration: none;
     font-size: 1rem;
     line-height: 1.5rem;
-  
+
     &:hover {
       color: ${props => props.secondary ? colors.secondary : colors.text};
       text-decoration: underline;
     }
+  }
+`;
+
+const NoticeContainer = styled.section`
+  @media (min-width: 35rem) {
+    grid-column: 1 / -1;
+  }
+
+  @media (min-width: 50rem) {
+    grid-column: auto;
+    margin-top: 2.3rem;
   }
 `;
 
@@ -63,7 +81,7 @@ const Footer = () => (
           </li>
           <li>
             <LinkContainer secondary>
-              <a href="https://www.gouvernement.fr/info-coronavirus" target="_blank">
+              <a href="https://www.gouvernement.fr/info-coronavirus" target="_blank" rel="noopener noreferrer">
                 gouvernement.fr/info-coronavirus
               </a>
             </LinkContainer>
@@ -105,14 +123,14 @@ const Footer = () => (
           </li>
         </List>
       </section>
-      <section>
+      <NoticeContainer>
         <TextContainer>
          Algorithme d'orientation mis à jour sur les recommandations en vigueur au 22/03/2020 à 16h15.
           Ce site d’information n’est pas un dispositif médical, il ne délivre pas d’avis médical.
           Projet solidaire d'urgence, financé par <LinkContainer secondary><Link to="/partenaires">l’Alliance Digitale contre le COVID-19 </Link> </LinkContainer>
-           : <LinkContainer secondary><a href="https://twitter.com/maladiecovid19" target="_blank">@maladiecovid19</a></LinkContainer>
+           : <LinkContainer secondary><a href="https://twitter.com/maladiecovid19" target="_blank" rel="noopener noreferrer">@maladiecovid19</a></LinkContainer>
         </TextContainer>
-      </section>
+      </NoticeContainer>
     </FooterContainer>
 );
 

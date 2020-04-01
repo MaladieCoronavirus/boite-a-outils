@@ -23,8 +23,10 @@ const SVG = styled.img`
 `;
 
 const Heading = styled.span`
-  position: absolute;
-  right: 1.125rem;
+  ${({right}) => right && `
+    position: absolute;
+    right: 1.125rem;
+  `}
   text-transform: uppercase;
   line-height: 0.9375rem;
   color: ${colors.accent};
@@ -41,9 +43,6 @@ const TextContainer = styled.div`
   margin-top: 1.5rem;
   text-align: center;
   letter-spacing: 0;
-  p {
-    max-width: 60ch;
-  }
   > * {
     margin-bottom: 0.325rem;
     width: 100%;
@@ -56,6 +55,7 @@ const Title = styled.h2`
   color: ${colors.bgPrimary};
   font-size: 1.3125rem;
   font-weight: bold;
+  text-align: left;
 `;
 
 const SubTitle = styled.p`
@@ -63,6 +63,7 @@ const SubTitle = styled.p`
   line-height: 1.25rem;
   color: ${colors.text};
   font-size: 1rem;
+  text-align: left;
 `;
 
 const Link = styled.a`
@@ -73,13 +74,14 @@ const Link = styled.a`
   color: ${colors.accent};
   font-size: 0.75rem;
   font-weight: 500;
+  text-align: left;
   :focus {
     outline: none;
     text-decoration: underline;
   }
 `;
 
-const CTA = styled.button`
+const CTA = styled.a`
   align-items: center;
   justify-content: center;
   border-radius: 0.125rem;
@@ -91,17 +93,19 @@ const CTA = styled.button`
   color: #FFFFFF;
   font-size: 0.875rem;
   font-weight: 500;
+  display: inline-flex;
+  text-decoration: none;
 `;
 
 const Card = ({ data: { link, image, heading, title, subtitle }}) =>
   <StyledCard>
-    <SVG src={image.question} alt={title} />
-    <Heading>{heading}</Heading>
+    {image && <SVG src={image.question} alt={title} />}
+    <Heading right={!!image}>{heading}</Heading>
     <TextContainer>
       <Title>{title}</Title>
       <SubTitle>{subtitle}</SubTitle>
-      <Link href={link} title={title}>{link}</Link>
-      <CTA>En savoir plus</CTA>
+      <Link href={link} title={title} target="_blank" rel="noopener noreferrer">{link}</Link>
+      <CTA href={link} title={title} target="_blank" rel="noopener noreferrer">En savoir plus</CTA>
     </TextContainer>
   </StyledCard>
 
