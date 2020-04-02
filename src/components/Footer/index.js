@@ -136,7 +136,7 @@ const Footer = () => {
           <TextContainer>
             Base d’information mise à jour le {buildDate}. Vous pouvez accéder et contribuer à cette base
             d’information sur le projet Github <LinkContainer secondary>
-            <a href="https://github.com/MaladieCoronavirus/boite-a-outils" target="_blank" rel="noopener noreferrer">MaladieCoronavirus/boite-a-outils</a></LinkContainer>.
+            <a href="https://github.com/MaladieCoronavirus/boite-a-outils/tree/develop/src/resources" target="_blank" rel="noopener noreferrer">MaladieCoronavirus/boite-a-outils</a></LinkContainer>.
             Site réalisé avec le concours de <LinkContainer secondary><Link to="/partenaires">l’Alliance Digitale contre le COVID-19 </Link> </LinkContainer>
              : <LinkContainer secondary><a href="https://twitter.com/maladiecovid19" target="_blank" rel="noopener noreferrer">@maladiecovid19</a></LinkContainer>
           </TextContainer>

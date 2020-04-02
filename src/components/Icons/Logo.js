@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Logo = () => (
-    <svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <svg width="2.5rem" height="2.5rem" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg">
       <title>logo@2x</title>
       <desc>Created with Sketch.</desc>
       <g id="Page-1" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
