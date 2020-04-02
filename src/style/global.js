@@ -12,9 +12,13 @@ export const globalStyles = css`
     background-color: ${colors.bgMuted};
     color: ${colors.text};
     scroll-behavior: smooth;
-    
+
     @media (min-width: 50rem) {
       font-size: 100%;
+    }
+
+    @supports (font-variation-settings: normal) {
+      font-family: 'Inter var', Arial, sans-serif;
     }
   }
 
