@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import { colors } from 'Style/colors';
+import OutboundLink from 'Components/OutboundLink';
 
 const StyledCard = styled.li`
   position: relative;
@@ -67,7 +68,7 @@ const SubTitle = styled.p`
   text-align: left;
 `;
 
-const Link = styled.a`
+const Link = styled(OutboundLink)`
   margin-bottom: 1.5rem;
   text-decoration: none;
   line-height: 1rem;
@@ -82,7 +83,7 @@ const Link = styled.a`
   }
 `;
 
-const CTA = styled.a`
+const CTA = styled(OutboundLink)`
   align-items: center;
   justify-content: center;
   border-radius: 0.125rem;
@@ -105,8 +106,8 @@ const Card = ({ data: { link, image, heading, title, subtitle }}) =>
     <TextContainer>
       <Title>{title}</Title>
       <SubTitle>{subtitle}</SubTitle>
-      <Link href={link} title={title} target="_blank" rel="noopener noreferrer">{link}</Link>
-      <CTA href={link} title={title} target="_blank" rel="noopener noreferrer">En savoir plus</CTA>
+      <Link href={link} title={title}>{link}</Link>
+      <CTA href={link} title={title}>En savoir plus</CTA>
     </TextContainer>
   </StyledCard>
 
