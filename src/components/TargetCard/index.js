@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import { colors } from 'Style/colors';
-import arrowRight from 'Images/arrowRight.svg';
+import { ArrowRight } from 'Components/Icons';
 
 const CardContainer = styled.li`
   display: inline-flex;
@@ -69,8 +69,8 @@ const Title = styled.h4`
     }
 `;
 
-const ArrowRightIcon = styled.img`
-  margin-left: .5rem;
+const IconContainer = styled.span`
+  margin: 0.0625rem 0 0 .5rem;
 `;
 
 const LINK_TEXT = 'Se renseigner';
@@ -84,7 +84,9 @@ const TargetCard = ({title, link}) => (
       <LinkContainer>
         <a href={link} data-title={LINK_TEXT}>
           {LINK_TEXT}
-          <ArrowRightIcon src={arrowRight} alt={LINK_TEXT} />
+          <IconContainer>
+            <ArrowRight/>
+          </IconContainer>
         </a>
       </LinkContainer>
     </CardContainer>
