@@ -6,11 +6,16 @@ export const globalStyles = css`
   html {
     box-sizing: border-box;
     -webkit-text-size-adjust: none;
+    font-size: 87.5%;
     font-family: Inter, Arial, sans-serif;
     font-weight: 500;
     background-color: ${colors.bgMuted};
     color: ${colors.text};
     scroll-behavior: smooth;
+    
+    @media (min-width: 50rem) {
+      font-size: 100%;
+    }
   }
 
   *,

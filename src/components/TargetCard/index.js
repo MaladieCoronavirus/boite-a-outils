@@ -61,7 +61,7 @@ const LinkContainer = styled.div`
 
 const Title = styled.h4`
   color: ${colors.primary};
-  font-size: 1.15rem;
+  font-size: 1.25rem;
   line-height: 1.8125rem;
   
     @media (min-width: 30rem) {
