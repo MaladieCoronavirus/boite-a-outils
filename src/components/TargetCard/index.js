@@ -5,6 +5,7 @@ import { colors } from 'Style/colors';
 import { ArrowRight } from 'Components/Icons';
 
 const CardContainer = styled.li`
+  position: relative;
   display: inline-flex;
   flex-flow: row wrap;
   flex-basis: 32%;
@@ -18,9 +19,13 @@ const CardContainer = styled.li`
   font-size: 0.875rem;
   line-height: 1.0625rem;
   
-    @media (min-width: 30rem) {
-      min-width: 25rem;
-    }
+  :hover {
+    opacity: .8;
+  }
+  
+  @media (min-width: 30rem) {
+    min-width: 25rem;
+  }
 `;
 
 const TitleContainer = styled.div`
@@ -42,20 +47,26 @@ const TitleContainer = styled.div`
 const LinkContainer = styled.div`
   display: flex;
   flex-grow: 1;
+  align-items: center;
+  justify-content: center;
   border-left: 1px solid #DFDFDF;
   min-width: 8.625rem;
   max-width: 8.625rem;
   height: 100%;
   
   a {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
     color: ${colors.accent};
     font-weight: 500;
     text-decoration: none;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
   }
 `;
 
