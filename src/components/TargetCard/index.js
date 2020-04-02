@@ -2,14 +2,14 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 import { colors } from 'Style/colors';
-import arrowRight from 'Images/arrowRight.svg';
+import { ArrowRight } from 'Components/Icons';
 
 const CardContainer = styled.li`
   display: inline-flex;
   flex-flow: row wrap;
   flex-basis: 32%;
   height: 6.875rem;
-  min-width: 27rem;
+  min-width: 20rem;
   border: 1px solid #DFDFDF;
   border-radius: 5px;
   background-color: #FFFFFF;
@@ -17,6 +17,10 @@ const CardContainer = styled.li`
   align-items: center;
   font-size: 0.875rem;
   line-height: 1.0625rem;
+  
+    @media (min-width: 30rem) {
+      min-width: 25rem;
+    }
 `;
 
 const TitleContainer = styled.div`
@@ -25,10 +29,14 @@ const TitleContainer = styled.div`
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  padding-left: 2.875rem;
+  padding-left: 1rem;
   font-weight: 600;
   height: 100%;
   color: ${colors.text};
+  
+    @media (min-width: 30rem) {
+      padding-left: 2rem;
+    }
 `;
 
 const LinkContainer = styled.div`
@@ -53,12 +61,16 @@ const LinkContainer = styled.div`
 
 const Title = styled.h4`
   color: ${colors.primary};
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   line-height: 1.8125rem;
+  
+    @media (min-width: 30rem) {
+      font-size: 1.5rem;
+    }
 `;
 
-const ArrowRightIcon = styled.img`
-  margin-left: .5rem;
+const IconContainer = styled.span`
+  margin: 0.0625rem 0 0 .5rem;
 `;
 
 const LINK_TEXT = 'Se renseigner';
@@ -72,7 +84,9 @@ const TargetCard = ({title, link}) => (
       <LinkContainer>
         <a href={link} data-title={LINK_TEXT}>
           {LINK_TEXT}
-          <ArrowRightIcon src={arrowRight} alt={LINK_TEXT} />
+          <IconContainer>
+            <ArrowRight/>
+          </IconContainer>
         </a>
       </LinkContainer>
     </CardContainer>
