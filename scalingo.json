@@ -1,0 +1,17 @@
+{
+  "name": "Outils Coronavirus",
+  "stack": "scalingo-18",
+  "repository": "https://github.com/MaladieCoronavirus/boite-a-outils",
+  "website": "https://www.outilscoronavirus.fr",
+  "env": {
+    "CANONICAL_HOST_URL": {
+      "generator": "url"
+    }
+  },
+  "formation": {
+    "web": {
+      "amount": 1,
+      "size": "S"
+    }
+  }
+}

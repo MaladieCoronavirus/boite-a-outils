@@ -14,31 +14,32 @@ log_format json_custom escape=json
   '"X-Forwarded-For":"$proxy_add_x_forwarded_for"'
 '}';
 
-server {
-  listen 81;
-  access_log off;
-  allow 127.0.0.1;
-  deny all;
+# datadog integration
+# server {
+#   listen 81 reuseport;
+#   access_log off;
+#   allow 127.0.0.1;
+#   deny all;
+#
+#   location /nginx_status {
+#     stub_status;
+#   }
+# }
 
-  location /nginx_status {
-    stub_status;
-  }
-}
-
 server {
-    listen <%= ENV['PORT'] %> reuseport;
     server_name localhost;
-
+    listen <%= ENV['PORT'] %> reuseport;
     charset utf-8;
-    port_in_redirect off;
-    root <%= ENV['HOME'] %>/public/;
-    access_log logs/access.log.json json_custom;
-    keepalive_timeout 5;
 
-    add_header Content-Security-Policy "default-src 'self'; script-src 'self' https://cdn.simpleanalytics.io; frame-ancestors 'none'" always;
-    add_header X-XSS-Protection "1; mode=block" always;
-    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" always
-    add_header X-Frame-Options "DENY" always;
+    root <%= ENV['HOME'] %>/public/;
+
+    port_in_redirect off;
+
+    access_log logs/access.log.json json_custom;
+    error_log logs/error.log crit;
+
+    keepalive_timeout 30;
+    send_timeout 5;
 
     error_page 405 @error405;
     location @error405 {
@@ -53,27 +54,32 @@ server {
         return 301 https://$host$request_uri;
     }
 
-    if ($host != <%= CANONICAL_HOST %>) {
-      return 301 $http_x_forwarded_proto://<%= CANONICAL_HOST %>$request_uri;
+    if ($host != <%= ENV['CANONICAL_HOST_URL'] %>) {
+      return 301 $http_x_forwarded_proto://<%= ENV['CANONICAL_HOST_URL'] %>$request_uri;
     }
 
     location ~* ^/sw.js$ {
+        include <%= ENV['HOME'] %>/extra-http-headers.conf;
         add_header Cache-Control "public, max-age=0, must-revalidate";
     }
 
     location ~* \.(js|css)$ {
+        include <%= ENV['HOME'] %>/extra-http-headers.conf;
         add_header Cache-Control "public, max-age=31536000, immutable";
     }
 
     location ~* ^/static/.* {
+        include <%= ENV['HOME'] %>/extra-http-headers.conf;
         add_header Cache-Control "public, max-age=31536000, immutable";
     }
 
     location ~* ^/icons/.*$  {
+        include <%= ENV['HOME'] %>/extra-http-headers.conf;
         add_header Cache-Control "public, max-age=31536000, immutable";
     }
 
     location ~* .* {
+        include <%= ENV['HOME'] %>/extra-http-headers.conf;
         add_header Cache-Control "public, max-age=0, must-revalidate";
     }
 }
