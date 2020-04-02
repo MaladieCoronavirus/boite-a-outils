@@ -8,6 +8,7 @@ const StyledContainer = styled.ul`
   gap: 2rem;
   padding: 2rem 0;
   list-style-type: none;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 
   @media (min-width: 30rem) {
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
