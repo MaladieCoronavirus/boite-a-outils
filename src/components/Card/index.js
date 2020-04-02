@@ -4,6 +4,8 @@ import { colors } from 'Style/colors';
 import OutboundLink from 'Components/OutboundLink';
 
 const StyledCard = styled.li`
+  display: flex;
+  flex-direction: column;
   position: relative;
   border: 1px solid ${colors.bg};
   border-radius: 0.25rem;
@@ -69,6 +71,7 @@ const SubTitle = styled.p`
 `;
 
 const Link = styled(OutboundLink)`
+  margin-top: auto;
   margin-bottom: 1.5rem;
   text-decoration: none;
   line-height: 1rem;
@@ -77,6 +80,9 @@ const Link = styled(OutboundLink)`
   font-size: 0.75rem;
   font-weight: 500;
   text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   :focus {
     outline: none;
     text-decoration: underline;
