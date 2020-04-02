@@ -2,8 +2,8 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import OutboundLink from 'Components/OutboundLink';
-
 import { colors } from 'Style/colors';
+import { DoNotTrackOption } from "Components/Tracking";
 
 const FooterContainer = styled.footer`
   display: grid;
@@ -142,8 +142,12 @@ const Footer = () => {
              : <LinkContainer secondary><OutboundLink href="https://twitter.com/maladiecovid19">@maladiecovid19</OutboundLink></LinkContainer>
           </TextContainer>
         </NoticeContainer>
+        <DoNotTrackOption>
+          <span>Je ne souhaite pas fournir d'informations anonymes d'utilisations afin d'aider les développeurs de OutilsCoronavirus.fr.</span>
+          <span>(un cookie sera déposé sur votre terminal pour se souvenir de votre choix)</span>
+        </DoNotTrackOption>
       </FooterContainer>
   );
-}
+};
 
 export default Footer;

@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 
 import { colors } from 'Style/colors';
 import { ArrowRight } from 'Components/Icons';
+import { trackEvent } from "Components/Tracking";
 
 const CardContainer = styled.li`
   position: relative;
@@ -93,7 +94,10 @@ const TargetCard = ({title, link}) => (
         <Title>{title}</Title>
       </TitleContainer>
       <LinkContainer>
-        <a href={link} data-title={LINK_TEXT}>
+        <a href={link} data-title={LINK_TEXT} onClick={() => {
+            trackEvent('visitor_type_selection', title);
+            return false;
+        }}>
           {LINK_TEXT}
           <IconContainer>
             <ArrowRight/>
@@ -101,7 +105,6 @@ const TargetCard = ({title, link}) => (
         </a>
       </LinkContainer>
     </CardContainer>
-)
+);
 
 export default TargetCard;
-

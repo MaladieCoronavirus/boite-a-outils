@@ -65,5 +65,19 @@ module.exports = {
         icon: `src/images/favicon.svg`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-simple-analytics',
+      options: {
+        eventsGlobal: 'sa_event',
+        events: true,
+        trackPageViews: true,
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
   ],
-}
+};
