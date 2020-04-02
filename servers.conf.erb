@@ -15,16 +15,19 @@ log_format json_custom escape=json
     '}';
 
 # datadog integration
-# server {
-#   listen 81 reuseport;
-#   access_log off;
-#   allow 127.0.0.1;
-#   deny all;
-#
-#   location /nginx_status {
-#     stub_status;
-#   }
-# }
+server {
+  listen 8081 reuseport;
+
+  server_tokens on;
+
+  access_log off;
+  allow 127.0.0.1;
+  deny all;
+
+  location /nginx_status {
+    stub_status;
+  }
+}
 
 server {
     server_name localhost;
