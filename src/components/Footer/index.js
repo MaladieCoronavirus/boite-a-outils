@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import { Link, useStaticQuery, graphql } from 'gatsby';
+import OutboundLink from 'Components/OutboundLink';
 
 import { colors } from 'Style/colors';
 
@@ -90,9 +91,9 @@ const Footer = () => {
             </li>
             <li>
               <LinkContainer secondary>
-                <a href="https://www.gouvernement.fr/info-coronavirus" target="_blank" rel="noopener noreferrer">
+                <OutboundLink href="https://www.gouvernement.fr/info-coronavirus" data-title="gouvernement.fr/info-coronavirus">
                   gouvernement.fr/info-coronavirus
-                </a>
+                </OutboundLink>
               </LinkContainer>
             </li>
           </List>
@@ -111,23 +112,23 @@ const Footer = () => {
             </li>
             <li>
               <LinkContainer>
-                <a href="https://maladiecoronavirus.fr/mentions-legales" title="Mentions légales" target="_blank" rel="noopener noreferrer">
+                <OutboundLink href="https://maladiecoronavirus.fr/mentions-legales" data-title="Mentions légales">
                   Mentions légales
-                </a>
+                </OutboundLink>
               </LinkContainer>
             </li>
             <li>
               <LinkContainer>
-                <a href="https://maladiecoronavirus.fr/partenaires" title="Partenaires" target="_blank" rel="noopener noreferrer">
+                <OutboundLink href="https://maladiecoronavirus.fr/partenaires" data-title="Partenaires">
                   Partenaires
-                </a>
+                </OutboundLink>
               </LinkContainer>
             </li>
             <li>
               <LinkContainer>
-                <a href="https://maladiecoronavirus.fr/presse" title="Presse" target="_blank" rel="noopener noreferrer">
+                <OutboundLink href="https://maladiecoronavirus.fr/presse" data-title="Presse">
                   Presse
-                </a>
+                </OutboundLink>
               </LinkContainer>
             </li>
           </List>
@@ -136,9 +137,9 @@ const Footer = () => {
           <TextContainer>
             Base d’information mise à jour le {buildDate}. Vous pouvez accéder et contribuer à cette base
             d’information sur le projet Github <LinkContainer secondary>
-            <a href="https://github.com/MaladieCoronavirus/boite-a-outils/tree/develop/src/resources" target="_blank" rel="noopener noreferrer">MaladieCoronavirus/boite-a-outils</a></LinkContainer>.
-            Site réalisé avec le concours de <LinkContainer secondary><Link to="/partenaires">l’Alliance Digitale contre le COVID-19 </Link> </LinkContainer>
-             : <LinkContainer secondary><a href="https://twitter.com/maladiecovid19" target="_blank" rel="noopener noreferrer">@maladiecovid19</a></LinkContainer>
+            <OutboundLink href="https://github.com/MaladieCoronavirus/boite-a-outils/tree/develop/src/resources">MaladieCoronavirus/boite-a-outils</OutboundLink></LinkContainer>.
+            Site réalisé avec le concours de <LinkContainer secondary><OutboundLink href="https://maladiecoronavirus.fr/partenaires" data-title="Partenaires">l’Alliance Digitale contre le COVID-19 </OutboundLink> </LinkContainer>
+             : <LinkContainer secondary><OutboundLink href="https://twitter.com/maladiecovid19">@maladiecovid19</OutboundLink></LinkContainer>
           </TextContainer>
         </NoticeContainer>
       </FooterContainer>
