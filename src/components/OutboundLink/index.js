@@ -1,18 +1,19 @@
-const OutboundLink = ({href, ...rest}) => {
-  const url = new URL(href);
+import React from 'react';
 
-  return (
+const OutboundLink = ({children, href, ...rest}) =>
+
     <a
       {...rest}
-      href={url.href}
+      href={href}
       target="_blank"
       rel="noopener noreferrer"
       onClick={e => {
           // log analytics will be done there
           return false;
       }}
-    />
-  )
-};
+    >
+      {children}
+    </a>
+;
 
 export default OutboundLink;
