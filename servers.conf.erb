@@ -1,18 +1,18 @@
 log_format json_custom escape=json
-'{'
-  '"http.version":"$request",'
-  '"http.status_code":$status,'
-  '"http.method":"$request_method",'
-  '"http.referer":"$http_referer",'
-  '"http.useragent":"$http_user_agent",'
-  '"time_local":"$time_local",'
-  '"remote_addr":"$remote_addr",'
-  '"remote_user":"$remote_user",'
-  '"body_bytes_sent":"$body_bytes_sent",'
-  '"request_time":$request_time,'
-  '"response_content_type":"$sent_http_content_type",'
-  '"X-Forwarded-For":"$proxy_add_x_forwarded_for"'
-'}';
+    '{'
+      '"http.version":"$request",'
+      '"http.status_code":$status,'
+      '"http.method":"$request_method",'
+      '"http.referer":"$http_referer",'
+      '"http.useragent":"$http_user_agent",'
+      '"time_local":"$time_local",'
+      '"remote_addr":"$remote_addr",'
+      '"remote_user":"$remote_user",'
+      '"body_bytes_sent":"$body_bytes_sent",'
+      '"request_time":$request_time,'
+      '"response_content_type":"$sent_http_content_type",'
+      '"X-Forwarded-For":"$proxy_add_x_forwarded_for"'
+    '}';
 
 # datadog integration
 # server {
@@ -35,7 +35,7 @@ server {
 
     port_in_redirect off;
 
-    access_log logs/access.log.json json_custom;
+    access_log logs/access.log json_custom;
     error_log logs/error.log crit;
 
     keepalive_timeout 30;

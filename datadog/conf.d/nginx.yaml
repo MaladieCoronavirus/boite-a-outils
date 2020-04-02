@@ -4,7 +4,7 @@ instances:
 
 logs:
   - type: file
-    path: /app/logs/access.log.json
+    path: /app/logs/access.log
     service: nginx
     source: nginx
 
