@@ -1,12 +1,12 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
-import CategoryCards from 'Components/CategoryCards';
+import CategoryCards from "Components/CategoryCards";
 
 const PatientCards = () => {
   const resources = useStaticQuery(graphql`
     query PatientResources {
-      allResourcesYaml(filter: {target: {eq: "patient"}}) {
+      allResourcesYaml(filter: { target: { eq: "patients" } }) {
         nodes {
           id
           link
@@ -19,9 +19,7 @@ const PatientCards = () => {
     }
   `);
 
-  return (
-    <CategoryCards resources={resources} />
-  );
-}
+  return <CategoryCards resources={resources} />;
+};
 
 export default PatientCards;
