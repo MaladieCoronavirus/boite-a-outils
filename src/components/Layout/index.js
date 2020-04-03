@@ -27,16 +27,19 @@ export const Main = styled.div`
     grid-template-columns: auto repeat(12, minmax(auto, 5.41rem)) auto;
     column-gap: 1.875rem;
   }
+
+  > section:nth-of-type(odd) {
+    background-color: ${colors.bg};
+  }
 `;
 
 export const Content = styled.section`
   grid-column: 2 / -2;
-  padding: 2rem 0;
+  padding: 2rem 2.875rem;
 `;
 
 export const FullWidthContent = styled.section`
   grid-column: 1 / -1;
-  background-color: ${colors.bg};
 `;
 
 // pageContext is injected by the mdx plugin
