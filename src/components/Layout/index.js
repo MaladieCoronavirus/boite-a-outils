@@ -35,11 +35,16 @@ export const Main = styled.div`
 
 export const Content = styled.section`
   grid-column: 2 / -2;
-  padding: 2rem 2.875rem;
+  padding: 2rem 0;
 `;
 
 export const FullWidthContent = styled.section`
   grid-column: 1 / -1;
+`;
+
+export const FullWidthContainer = styled.section`
+  grid-column: 1 / -1;
+  padding: 2rem 2.875rem;
 `;
 
 // pageContext is injected by the mdx plugin
