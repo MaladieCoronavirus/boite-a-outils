@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     siteUrl: `https://www.outilscoronavirus.fr/`,
     title: `OutilsCoronavirus.fr`,
-    description: `This is the meta description for the site`,
+    description: `Boîte à outils de référence pour les outils de suivi de maladies chroniques du COVID-19 chez les patients, professionnels de santé et établissements.`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
