@@ -2,7 +2,7 @@
 title: Accueil
 ---
 
-import { Content, FullWidthContainer, FullWidthContent, Main } from 'Components/Layout';
+import { Content, FullWidthContent, Main } from 'Components/Layout';
 import TargetCards from 'Components/TargetCards';
 import PatientCards from 'Components/PatientCards';
 import ProfessionalCards from 'Components/ProfessionalCards';
@@ -16,29 +16,41 @@ import EstablishmentsCards from 'Components/EstablishmentsCards';
   </Main>
 </FullWidthContent>
 
-<FullWidthContainer id="patient">
+<FullWidthContent>
+<Main>
+<Content id="patient">
 
   ## Retrouvez les informations qui vous concernent
   ### Pour tous les patients
 
   <PatientCards />
 
-</FullWidthContainer>
+</Content>
+</Main>
+</FullWidthContent>
 
-<FullWidthContainer id="praticien">
+<FullWidthContent>
+<Main>
+<Content id="praticien">
 
   ## Découvrez tous les sites d’utilités essentielles
   ### Pour tous les soignants, praticiens
 
   <ProfessionalCards />
 
-</FullWidthContainer>
+</Content>
+</Main>
+</FullWidthContent>
 
-<FullWidthContainer id="etablissement">
+<FullWidthContent>
+<Main>
+<Content id="etablissement">
 
   ## Parcourez les outils et les ressources à disposition
   ### Pour tous les établissements de santé
 
   <EstablishmentsCards />
 
-</FullWidthContainer>
+</Content>
+</Main>
+</FullWidthContent>

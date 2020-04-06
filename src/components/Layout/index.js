@@ -28,9 +28,6 @@ export const Main = styled.div`
     column-gap: 1.875rem;
   }
 
-  > section:nth-of-type(odd) {
-    background-color: ${colors.bg};
-  }
 `;
 
 export const Content = styled.section`
@@ -40,11 +37,9 @@ export const Content = styled.section`
 
 export const FullWidthContent = styled.section`
   grid-column: 1 / -1;
-`;
-
-export const FullWidthContainer = styled.section`
-  grid-column: 1 / -1;
-  padding: 2rem 2.875rem;
+  &:nth-of-type(odd) {
+    background-color: ${colors.bg};
+  }
 `;
 
 // pageContext is injected by the mdx plugin
