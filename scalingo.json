@@ -5,7 +5,11 @@
   "website": "https://www.outilscoronavirus.fr",
   "env": {
     "CANONICAL_HOST_URL": {
-      "generator": "url"
+      "generator": "template",
+      "template": "%APP%.osc-fr1.scalingo.io"
+    },
+    "DISABLE_DATADOG_AGENT": {
+      "value": "1"
     }
   },
   "formation": {
