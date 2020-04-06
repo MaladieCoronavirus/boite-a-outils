@@ -1,0 +1,17 @@
+init_config:
+
+instances:
+  - name: www.outilscoronavirus.fr
+    url: https://www.outilscoronavirus.fr/
+    min_collection_interval: 300
+    content_match: 'Mentions légales'
+    http_response_status_code: 200
+    check_certificate_expiration: true
+    days_warning: 2
+    days_critical: 1
+    allow_redirects: false
+    tags:
+      - app:outils-coronavirus
+    tls_verify: true
+    headers:
+      Cookie: doNotTrack=yes
