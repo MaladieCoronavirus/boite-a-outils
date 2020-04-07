@@ -1,19 +1,23 @@
 import React from 'react';
+import {trackEvent} from "Components/Tracking";
 
-const OutboundLink = ({children, href, ...rest}) =>
+const OutboundLink = ({children, href, ...rest}) => {
+    const url = new URL(href);
 
-    <a
-      {...rest}
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      onClick={e => {
-          // log analytics will be done there
-          return false;
-      }}
-    >
-      {children}
-    </a>
-;
+    return (
+        <a
+            {...rest}
+            href={url.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => {
+                trackEvent('outbound_link', url.hostname + url.pathname);
+                return false;
+            }}
+        >
+            {children}
+        </a>
+    )
+};
 
 export default OutboundLink;
