@@ -1,6 +1,6 @@
 name: Asso Patients SFD
 pathology: Diabètes
-description: Site de la fédération françaises des diabétiques
-target: patient
+description: Site de la fédération française des diabétiques
+target: patients
 link: https://www.federationdesdiabetiques.org/
 author: D. Rosenbaum
