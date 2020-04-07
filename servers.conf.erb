@@ -3,7 +3,7 @@ log_format json_custom escape=json
       '"http.version":"$server_protocol",'
       '"http.status_code":$status,'
       '"http.method":"$request_method",'
-      '"http.url":"$request_uri",'
+      '"http.url":"$http_x_forwarded_proto://$host$request_uri",'
       '"http.referer":"$http_referer",'
       '"http.useragent":"$http_user_agent",'
       '"time_local":"$time_local",'
