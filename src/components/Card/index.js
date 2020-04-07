@@ -112,9 +112,10 @@ const Card = ({ data: { link, image, heading, title, subtitle }}) =>
     <TextContainer>
       <Title>{title}</Title>
       <SubTitle>{subtitle}</SubTitle>
-      <Link href={link} title={title}>{link}</Link>
-      <CTA href={link} title={title}>En savoir plus</CTA>
+        {link && <Link href={link} title={title}>{link}</Link>}
+        {link && <CTA href={link} title={title}>En savoir plus</CTA>}
     </TextContainer>
   </StyledCard>
+;
 
 export default Card;
