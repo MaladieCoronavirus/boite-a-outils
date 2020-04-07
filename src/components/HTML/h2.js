@@ -10,6 +10,10 @@ const H2 = styled.h2`
   font-weight: 500;
   color: ${colors.accent};
   text-align: center;
+
+  p + & {
+    margin-top: 1.5rem;
+  }
 `;
 
 export default H2;

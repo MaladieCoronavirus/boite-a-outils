@@ -112,9 +112,9 @@ const Footer = () => {
             </li>
             <li>
               <LinkContainer>
-                <OutboundLink href="https://maladiecoronavirus.fr/mentions-legales" data-title="Mentions légales">
+                <Link to="/mentions-legales/" data-title="Mentions légales">
                   Mentions légales
-                </OutboundLink>
+                </Link>
               </LinkContainer>
             </li>
             <li>
