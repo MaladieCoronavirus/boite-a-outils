@@ -19,9 +19,9 @@ const CardsContainer = styled.ul`
 const TargetCards = () => {
   return (
       <CardsContainer>
-        <TargetCard title="Un patient" link="#patient"/>
-        <TargetCard title="Un praticien" link="#praticien"/>
-        <TargetCard title="Un établissement" link="#etablissement"/>
+        <TargetCard title="Un patient" link="/patients/"/>
+        <TargetCard title="Un praticien" link="/praticiens/"/>
+        <TargetCard title="Un établissement" link="/etablissements/"/>
       </CardsContainer>
   );
 }

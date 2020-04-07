@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { Link } from 'gatsby';
 
 import { colors } from 'Style/colors';
 import { ArrowRight } from 'Components/Icons';
@@ -18,11 +19,11 @@ const CardContainer = styled.li`
   align-items: center;
   font-size: 0.875rem;
   line-height: 1.0625rem;
-  
+
   :hover {
     opacity: .8;
   }
-  
+
   @media (min-width: 30rem) {
     min-width: 25rem;
   }
@@ -38,7 +39,7 @@ const TitleContainer = styled.div`
   font-weight: 600;
   height: 100%;
   color: ${colors.text};
-  
+
     @media (min-width: 30rem) {
       padding-left: 2rem;
     }
@@ -53,12 +54,12 @@ const LinkContainer = styled.div`
   min-width: 8.625rem;
   max-width: 8.625rem;
   height: 100%;
-  
+
   a {
     color: ${colors.accent};
     font-weight: 500;
     text-decoration: none;
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -74,7 +75,7 @@ const Title = styled.h4`
   color: ${colors.primary};
   font-size: 1.25rem;
   line-height: 1.8125rem;
-  
+
     @media (min-width: 30rem) {
       font-size: 1.5rem;
     }
@@ -93,15 +94,14 @@ const TargetCard = ({title, link}) => (
         <Title>{title}</Title>
       </TitleContainer>
       <LinkContainer>
-        <a href={link} data-title={LINK_TEXT}>
+        <Link to={link} data-title={LINK_TEXT}>
           {LINK_TEXT}
           <IconContainer>
             <ArrowRight/>
           </IconContainer>
-        </a>
+        </Link>
       </LinkContainer>
     </CardContainer>
 )
 
 export default TargetCard;
-

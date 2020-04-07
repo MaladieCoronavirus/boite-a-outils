@@ -6,7 +6,7 @@ import CategoryCards from 'Components/CategoryCards';
 const ProfessionalCards = () => {
   const resources = useStaticQuery(graphql`
     query ProfessionalResources {
-      allResourcesYaml(filter: {target: {eq: "professional"}}) {
+      allResourcesYaml(filter: {target: {eq: "praticiens"}}) {
         nodes {
           id
           link

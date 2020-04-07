@@ -1,6 +1,6 @@
 name: DepistHTA
 pathology: Hypertension
 description: Informations relatives au covid pour patients hypertendus
-target: patient
+target: patients
 link: https://www.depisthta.net
 author: D. Rosenbaum
