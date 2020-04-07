@@ -2,7 +2,6 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { Link, useStaticQuery, graphql } from 'gatsby';
 import OutboundLink from 'Components/OutboundLink';
-
 import { colors } from 'Style/colors';
 
 const FooterContainer = styled.footer`
@@ -144,6 +143,6 @@ const Footer = () => {
         </NoticeContainer>
       </FooterContainer>
   );
-}
+};
 
 export default Footer;
