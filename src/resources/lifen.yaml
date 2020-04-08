@@ -1,6 +1,6 @@
 name: Lifen
 pathology: Covid
 description: "La solution gratuite de suivi à distance des patients atteints du Covid-19"
-target: etablissement
+target: etablissements
 link: https://covid19.lifen.fr/
 author: L. Pavillet
