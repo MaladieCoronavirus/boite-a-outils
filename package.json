@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "gatsby develop",
+    "ci":    "gatsby build",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "test": "echo \"Error: no test specified\" && exit 1"
