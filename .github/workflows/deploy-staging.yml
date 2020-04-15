@@ -1,0 +1,30 @@
+name: Deploy to staging
+
+on:
+  push:
+    branches: [ develop ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - shell: bash
+        env:
+          SCALINGO_TOKEN: ${{ secrets.SCALINGO_TOKEN }}
+        run: |
+          BEARER_TOKEN=$(
+            curl -H "Accept: application/json" -H "Content-Type: application/json" \
+              -u ":$SCALINGO_TOKEN" \
+              -X POST 'https://auth.scalingo.com/v1/tokens/exchange' \
+            | jq '.token' -r
+          )
+
+          curl \
+            -H "Accept: application/json" \
+            -H "Content-Type: application/json" \
+            -H "Authorization: Bearer $BEARER_TOKEN" \
+            -X POST 'https://api.osc-fr1.scalingo.com/v1/apps/outilscoronavirus-staging/deployments' \
+            -d '{"deployment": {"git_ref": "develop", "source_url": "https://github.com/MaladieCoronavirus/boite-a-outils/archive/develop.tar.gz"}}'
