@@ -1,6 +1,7 @@
 name: Covid 19 Médicaments
 pathology: Information
 description: Test à effectuer en cas de symptomes et prise de traitement
-target: patients
+targets:
+  - patients
 link: https://www.covid19-medicaments.com
 author: F. Le Goff

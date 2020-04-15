@@ -1,6 +1,7 @@
 name: Comitehta
 pathology: Hypertension
 description: Site du comité français de lutte contre l'hypertension arterielle + tests observance
-target: patients
+targets:
+  - patients
 link: https://www.comitehta.org/
 author: D. Rosenbaum

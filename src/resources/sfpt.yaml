@@ -1,6 +1,7 @@
 name: SFPT
 pathology: Information
 description: Foire aux questions concernant la prise de traitement et Covid 19
-target: patients
+targets:
+  - patients
 link: https://www.pharmacol-fr.org/covid19-foire-aux-questions
 author: D. Rosenbaum

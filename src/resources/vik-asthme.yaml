@@ -1,6 +1,7 @@
 name: Vik Asthme
 pathology: Asthme
 description: Chatbot compagnon pour patient et aidants asthmatiques
-target: patients
+targets:
+  - patients
 link: https://m.me/VikAsthme
 author: L. Pavillet

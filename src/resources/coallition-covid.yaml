@@ -1,6 +1,9 @@
 name: Coallition covid
 pathology: Information
 description: "Appel à projets et recensement des besoins des bénéficiaires"
-target: etablissements
+targets:
+  - patients
+  - praticiens
+  - etablissements
 link: https://www.coalitioncovid.org/
 author: L. Pavillet

@@ -1,6 +1,7 @@
 name: Santé Respiratoire France
 pathology: Maladies Respiratoires chroniques
 description: "Site de l'association Santé Respiratoire France : conseils sur la poursuite des traitements de fond"
-target: patients
+targets:
+  - patients
 link: https://sante-respiratoire.com/
 author: L. Pillot

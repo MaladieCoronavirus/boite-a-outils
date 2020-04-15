@@ -1,6 +1,7 @@
 name: CoviDIAB
 pathology: Diabètes
 description: Site d’accompagnement personnalisé, d’information et d’éducation dédié aux patients diabétiques face à la menace COVID-19
-target: patients
+targets:
+  - patients
 link: https://www.covidiab.fr
 author: D. Rosenbaum
