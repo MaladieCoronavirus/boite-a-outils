@@ -1,7 +1,7 @@
 name: Exactcure
 pathology: Information
 description: "Simulations personnalisées pour éviter sous-doses, surdoses et interactions médicamenteuses"
-target: 
+targets:
   - praticiens
   - etablissements
 link: https://www.exactcure.com/simulation-lp/
