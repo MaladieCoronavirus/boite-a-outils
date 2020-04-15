@@ -42,6 +42,20 @@ export const FullWidthContent = styled.section`
   }
 `;
 
+export const CenteredTextContainer = styled.div`
+  display: grid;
+  column-gap: 0.5rem;
+  padding: 2rem 0;
+  grid-template-columns: 1fr 5fr 5fr 1fr;
+  text-align: center;
+  align-items: center;
+  
+   @media (min-width: 30rem) {
+    grid-template-columns: 1fr 5fr 5fr 1fr;
+    column-gap: 1.875rem;
+  }
+`;
+
 // pageContext is injected by the mdx plugin
 const BaseLayout = ({children, pageContext}) => {
   const { title, description } = pageContext.frontmatter;

@@ -23,7 +23,7 @@ const FooterContainer = styled.footer`
   }
 `;
 
-const FooterHeadline = styled.h3`
+const FooterHeadline = styled.h4`
   font-size: 1.1rem;
   font-weight: bold;
   color: ${colors.primary};
