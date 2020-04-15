@@ -1,6 +1,7 @@
 name: Fondation du souffle
 pathology: Information
 description: "Site de la fondation du souffle : pour tout savoir sur le coronavirus"
-target: patients
+targets:
+  - patients
 link: https://www.lesouffle.org/2020/03/03/pour-tout-savoir-sur-le-coronavirus/
 author: L. Pillot

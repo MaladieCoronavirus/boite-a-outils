@@ -1,6 +1,7 @@
 name: Fondation Grégory Pariente
 pathology: Asthme
 description: "Site de la FGP : vidéo sur le coronavirus est-il dangereux pour l’asthmatique ?"
-target: patients
+targets:
+  - patients
 link: http://gpfd.fr/
 author: L. Pillot

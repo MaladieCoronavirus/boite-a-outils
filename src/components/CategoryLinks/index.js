@@ -37,8 +37,8 @@ const Container = styled.div`
 const CategoryLinks = ({ links }) => {
   return (
     <Container>
-      {links.map(link => (
-        <CategoryLink to={link.url} activeClassName='active'>{link.pathology}</CategoryLink>
+      {links.map((link, index) => (
+        <CategoryLink key={index} to={link.url} activeClassName='active'>{link.pathology}</CategoryLink>
       ))}
     </Container>
   );

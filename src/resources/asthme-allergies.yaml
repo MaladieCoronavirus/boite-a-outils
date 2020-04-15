@@ -1,6 +1,7 @@
 name: Asthme & Allergies
 pathology: Asthme
 description: "Site de l'association Asthme & Allergies : page dédiée et régulièrement mise à jour"
-target: patients
+targets:
+  - patients
 link: https://asthme-allergies.org/informations-cornavirus-asthme/
 author: L. Pillot

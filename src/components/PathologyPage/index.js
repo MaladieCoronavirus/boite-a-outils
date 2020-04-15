@@ -25,7 +25,7 @@ const PathologyPage = ({data, pageContext}) => {
 
 export const query = graphql`
   query($pathology: String!, $target: String!,) {
-    allResourcesYaml(filter: {target: {eq: $target}, pathology: {eq: $pathology}}) {
+    allResourcesYaml(filter: {targets: {eq: $target}, pathology: {eq: $pathology}}) {
       nodes {
         id
         description
@@ -33,7 +33,6 @@ export const query = graphql`
         link
         name
         pathology
-        target
       }
     }
   }
