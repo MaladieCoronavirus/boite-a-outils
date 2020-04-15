@@ -1,6 +1,7 @@
 name: Exactcure Simulation Paracétamol
 pathology: Information
 description: "Simulations personnalisées pour éviter sous-doses, surdoses et interactions médicamenteuses"
-target: patients
+targets:
+  - patients
 link: https://www.exactcure.com/simulation-paracetamol/
 author: J.C. Chemin

@@ -1,6 +1,7 @@
 name: Asso Patients SFD
 pathology: Diabètes
-description: Site de la fédération française des diabétiques
-target: patients
-link: https://www.federationdesdiabetiques.org/
+description: FAQ traitements diabètes et covid-19
+targets:
+  - patients
+link: https://www.federationdesdiabetiques.org/federation/actualites/traitement-du-coronavirus-covid-19-des-reponses-a-vos-questions
 author: D. Rosenbaum

@@ -1,6 +1,7 @@
 name: "SPLF : Société de Pneumologie de Langue Française"
 pathology: Maladies Respi
 description: "Site de la SPLF : Centre de documentation COVID-19"
-target: praticiens
+targets:
+  - praticiens
 link: http://splf.fr/centre-de-documentation-covid-19/
 author: L. Pillot

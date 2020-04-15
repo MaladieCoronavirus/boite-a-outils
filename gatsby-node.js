@@ -6,15 +6,15 @@ exports.createPages = async ({ graphql, actions }) => {
   const targets = await graphql(`
     query {
       allResourcesYaml {
-        distinct(field: target)
+        distinct(field: targets)
       }
     }
   `);
 
-  targets.data.allResourcesYaml.distinct.forEach(async (target) => {
+  for (target of targets.data.allResourcesYaml.distinct) {
     const pathologies = await graphql(`
       query {
-        allResourcesYaml(filter: {target: {eq: "${target}"}}) {
+        allResourcesYaml(filter: {targets: {eq: "${target}"}}) {
           distinct(field: pathology)
         }
       }
@@ -66,5 +66,5 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       });
     });
-  });
+  }
 }
