@@ -1,6 +1,6 @@
 name: Exactcure
 pathology: Information
-description: "Simulations personnalisées pour éviter sous-doses, surdoses et interctions médicamenteuses"
+description: "Simulations personnalisées pour éviter sous-doses, surdoses et interactions médicamenteuses"
 target: 
  -praticiens
  -etablissements
