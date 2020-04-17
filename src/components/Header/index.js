@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { Link } from 'gatsby';
 
 import { colors } from 'Style/colors';
-  import { Logo } from 'Components/Icons';
+import { Logo } from 'Components/Icons';
 
 const HeaderContainer = styled.header`
   display: grid;

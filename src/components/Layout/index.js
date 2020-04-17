@@ -58,7 +58,7 @@ export const InformationBlocContainer = styled.div`
     padding: 0 .75rem;
   }
   
-  > div:nth-child(2) {
+  > div:nth-of-type(2) {
     margin: 2rem 0;
   }
   
@@ -67,7 +67,7 @@ export const InformationBlocContainer = styled.div`
     column-gap: 1.875rem;
     padding: 2rem 0;
     
-    > div:nth-child(2) {
+    > div:nth-of-type(2) {
        margin: 0;
      }
   }
