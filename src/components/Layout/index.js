@@ -33,6 +33,7 @@ export const Main = styled.div`
 export const Content = styled.section`
   grid-column: 2 / -2;
   padding: 2rem 0;
+  text-align: center;
 `;
 
 export const FullWidthContent = styled.section`
@@ -42,17 +43,33 @@ export const FullWidthContent = styled.section`
   }
 `;
 
-export const CenteredTextContainer = styled.div`
+export const InformationBlocContainer = styled.div`
   display: grid;
   column-gap: 0.5rem;
-  padding: 2rem 0;
-  grid-template-columns: 1fr 5fr 5fr 1fr;
+  grid-template-columns: auto;
   text-align: center;
   align-items: center;
   
-   @media (min-width: 30rem) {
+  h1, h2 {
+    text-align: left;
+  }
+  
+  > div {
+    padding: 0 .75rem;
+  }
+  
+  > div:nth-child(2) {
+    margin: 2rem 0;
+  }
+  
+   @media (min-width: 50rem) {
     grid-template-columns: 1fr 5fr 5fr 1fr;
     column-gap: 1.875rem;
+    padding: 2rem 0;
+    
+    > div:nth-child(2) {
+       margin: 0;
+     }
   }
 `;
 

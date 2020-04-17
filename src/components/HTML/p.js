@@ -5,6 +5,10 @@ const P = styled.p`
   line-height: 1.3125rem;
   text-align: left;
   
+  strong {
+    font-weight: 600;
+  }
+  
   & + & {
     margin-top: 1rem;
   }

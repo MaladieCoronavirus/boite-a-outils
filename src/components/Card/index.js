@@ -12,6 +12,7 @@ const StyledCard = styled.li`
   box-shadow: 1px 3px 9px 0 rgba(0, 0, 0, 0.07);
   background-color: rgba(255, 255, 255, 0.6);
   padding: 1.1875rem 1.125rem 1.875rem 2rem;
+  text-align: left;
   :focus-within, :hover {
     box-shadow: 0 0 0 0.05rem;
     color: #F5F5F5;
