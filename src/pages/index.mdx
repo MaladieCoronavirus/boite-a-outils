@@ -2,11 +2,10 @@
 title: Accueil
 ---
 
-import { Content, FullWidthContent, Main } from 'Components/Layout';
+import { Content, FullWidthContent, Main, GridRow, GridCell, InformationBlocContainer } from 'Components/Layout';
 import TargetCards from 'Components/TargetCards';
-import PatientCards from 'Components/PatientCards';
-import ProfessionalCards from 'Components/ProfessionalCards';
-import EstablishmentsCards from 'Components/EstablishmentsCards';
+import RecommendationList from 'Components/RecommendationList';
+import { Corona, Group, Question } from 'Components/Icons';
 
 <FullWidthContent>
   <Main>
@@ -18,39 +17,70 @@ import EstablishmentsCards from 'Components/EstablishmentsCards';
 
 <FullWidthContent>
 <Main>
-<Content id="patient">
+<Content>
 
   # Retrouvez les informations qui vous concernent
-  ## Pour tous les patients
+  ## Bienvenue sur le site outilscoronavirus.fr
 
-  <PatientCards />
+<InformationBlocContainer>
+<div/>
+<div>
+  <Corona/>
+</div>
+<div>
 
+  ### Une véritable boîte à outils
+
+  L’alliance digitale contre le COVID-19 présente [OutilsCoronavirus.fr](https://www.outilscoronavirus.fr) – la base open-source référençant les sites francophones d’informations médicales et d’outils digitaux pour lutter contre le COVID-19. [OutilsCoronavirus.fr](https://www.outilscoronavirus.fr) peut être enrichi par ses visiteurs, les liens étant revus par un board médical avant leur mise en ligne éventuelle.
+  Tout contenu cliniquement fiable, issu d’une association de patients, d’une société savante, d’une organisation publique ou privée est publiable à la condition d’être : accessible gratuitement pendant la pandémie, basé sur une approche prouvée par la science (Evidence Based Médecine), reconnu par la communauté.
+  Les contributeurs peuvent soumettre une proposition de lien en se rendant sur le projet GitHub [MaladieCoronavirus/boite-a-outils](https://github.com/MaladieCoronavirus/boite-a-outils/tree/develop/src/resources) et en proposant l’ajout d’un fichier de référencement via le mécanisme de Pull Request. L’équipe éditoriale du site se réserve la liberté d’accepter ou de refuser tout référencement.
+
+
+</div>
+<div/>
+</InformationBlocContainer>
 </Content>
 </Main>
 </FullWidthContent>
 
 <FullWidthContent>
 <Main>
-<Content id="praticien">
+<Content>
+<InformationBlocContainer>
+<div/>
+<div>
 
-  # Découvrez tous les sites d’utilités essentielles
-  ## Pour tous les soignants, praticiens
+  ### Afin d’orienter tous les publics
 
-  <ProfessionalCards />
+  Le site est orienté autour de trois publics : les patients, les professionnels de santé et les établissements. Pour les patients, elle permet à tous, atteints ou non d’une affection chronique de trouver des contenus adaptés à leur situation personnelle. Pour les professionnels de santé, ce sont les recommandations des sociétés savantes et les outils destinés à leurs patients qui sont référencés. Et pour les établissements de santé, nous travaillons avec les différents éditeurs mettant des solutions à disposition pour digitaliser les parcours de soin des patients à risque ou atteints du COVID.
 
+</div>
+<div>
+  <Group/>
+</div>
+<div/>
+</InformationBlocContainer>
 </Content>
 </Main>
 </FullWidthContent>
 
 <FullWidthContent>
 <Main>
-<Content id="etablissement">
+<Content>
+<InformationBlocContainer>
+<div/>
+<div>
+<Question/>
 
-  # Parcourez les outils et les ressources à disposition
-  ## Pour tous les établissements de santé
+  # Comment se protéger et protéger les autres au quotidien ?
+  ## Les Conseils de outilscoronavirus.fr
 
-  <EstablishmentsCards />
-
+</div>
+<div>
+    <RecommendationList/>
+</div>
+<div/>
+</InformationBlocContainer>
 </Content>
 </Main>
 </FullWidthContent>

@@ -8,7 +8,6 @@ const H1 = styled.h1`
   line-height: 1.22222;
   font-weight: 700;
   color: ${colors.primary};
-  text-align: center;
 `
 
 export default H1;

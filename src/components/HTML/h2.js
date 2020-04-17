@@ -9,7 +9,6 @@ const H2 = styled.h2`
   line-height: 1.21428;
   font-weight: 500;
   color: ${colors.accent};
-  text-align: center;
 
   p + & {
     margin-top: 1.5rem;
