@@ -1,8 +1,0 @@
-name: Exactcure
-pathology: Information
-description: "Simulations personnalisées pour éviter sous-doses, surdoses et interactions médicamenteuses"
-targets:
-  - praticiens
-  - etablissements
-link: https://www.exactcure.com/simulation-lp/
-author: J.C. Chemin

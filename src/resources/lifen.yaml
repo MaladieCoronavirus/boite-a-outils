@@ -1,6 +1,6 @@
 name: Lifen
 pathology: Covid
-description: "La solution gratuite de suivi à distance des patients atteints du Covid-19"
+description: "Solution de suivi à distance des patients atteints du Covid-19"
 targets:
   - etablissements
 link: https://covid19.lifen.fr/

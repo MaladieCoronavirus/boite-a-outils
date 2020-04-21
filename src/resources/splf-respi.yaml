@@ -1,5 +1,5 @@
 name: "SPLF : Société de Pneumologie de Langue Française"
-pathology: Maladies Respi
+pathology: Maladies Respiratoires
 description: "Site de la SPLF : Centre de documentation COVID-19"
 targets:
   - praticiens

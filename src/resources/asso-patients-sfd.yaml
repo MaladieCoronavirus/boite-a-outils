@@ -1,6 +1,6 @@
 name: Asso Patients SFD
 pathology: Diabètes
-description: FAQ traitements diabètes et covid-19
+description: Questions-Réponses sur les traitements diabètes et covid-19
 targets:
   - patients
 link: https://www.federationdesdiabetiques.org/federation/actualites/traitement-du-coronavirus-covid-19-des-reponses-a-vos-questions

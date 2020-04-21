@@ -1,0 +1,8 @@
+name: Exactcure Lopinavir
+pathology: Information
+description: "Simulations de dosage Lopinavir personnalisées pour éviter sous-doses, surdoses et interactions médicamenteuses"
+targets:
+  - praticiens
+  - etablissements
+link: https://www.exactcure.com/simulation-lp/
+author: J.C. Chemin
