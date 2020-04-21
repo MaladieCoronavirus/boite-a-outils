@@ -25,7 +25,6 @@ targets:
   - praticiens
 link: http://example.com
 author: J. Doe
-
 ```
 
 Merci pour vos contributions !
