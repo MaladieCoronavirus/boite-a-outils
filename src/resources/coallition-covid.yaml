@@ -1,6 +1,6 @@
-name: Coallition covid
+name: Coalition COVID
 pathology: Information
-description: "Appel à projets et recensement des besoins des bénéficiaires"
+description: "Appel à projets COVID"
 targets:
   - patients
   - praticiens
