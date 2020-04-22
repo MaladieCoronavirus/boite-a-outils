@@ -9,7 +9,8 @@ const SEO = ({title, description, lang = 'fr'}) => {
         site {
           siteMetadata {
             title
-            description
+            description,
+            googleSiteVerification
           }
         }
       }
@@ -29,7 +30,11 @@ const SEO = ({title, description, lang = 'fr'}) => {
         {
           name: 'description',
           content: metaDescription
-        }
+        },
+        {
+          name: 'google-site-verification',
+          content: site.siteMetadata.googleSiteVerification
+        },
       ]}
     />
   );
