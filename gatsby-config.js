@@ -5,6 +5,7 @@ module.exports = {
     siteUrl: `https://www.outilscoronavirus.fr/`,
     title: `OutilsCoronavirus.fr`,
     description: `Boîte à outils de référence pour les outils de suivi de maladies chroniques du COVID-19 chez les patients, professionnels de santé et établissements.`,
+    googleSiteVerification: `LBGlEnYm8jYwkNd9njCYdI01xo9WNOKHCqZir4mUg34`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
