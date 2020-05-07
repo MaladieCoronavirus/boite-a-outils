@@ -1,0 +1,7 @@
+name: CovidÉcoute
+pathology: Information
+description: "Téléconsultation gratuite proposée à toute personne en proie à une détresse psychologique liée à l’épidémie de Covid-19 et au confinement."
+targets:
+  - patients
+link: https://covidecoute.org
+author: F. Le Goff
