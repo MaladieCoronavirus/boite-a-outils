@@ -56,7 +56,7 @@ const RecommendationList = () => (
       <ListItem>
         <IconContainer><Mask/></IconContainer>
         <P>
-          <strong>Portez un masque</strong> si vous êtes malade.
+          <strong>Portez un masque</strong> en présence d'autres personnes.
         </P>
       </ListItem>
     </ListContainer>

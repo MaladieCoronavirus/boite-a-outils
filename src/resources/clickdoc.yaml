@@ -1,0 +1,8 @@
+name: ClickDoc Téléconsultation
+pathology: Outils
+description: "Service gratuit de télé-consultation (référencé par le ministère de la santé 10/10)."
+targets:
+  - praticiens
+  - etablissements
+link: https://covidecoute.org
+author: F. Le Goff
